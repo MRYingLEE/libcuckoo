@@ -28,18 +28,19 @@ Roadmap
 	Level 1: single operation with flexible API <Implemented>
 		find (existing in original project) / find_fn (only valid value returns, implemented in this project) ;
 		update (existing in original project) / update_fn (complex update, existing in original project);
-		erase (existing in original project) / erase-fn (conditional erase, implemented in this project);
+		erase (existing in original project) / erase_fn (conditional erase, implemented in this project);
 	
-	Level 2: fixed combinations <Soon>
+	Level 2: fixed combinations <Implemented>
 		exists_function (check/update, delete) + not_exists_function (insert) 
 	
 		upsert=check/update + insert (existing in original project) 
-		upsert_fn=check/update_fn+insert_fn
-		find_insert=find+ insert
-		delete_insert= delete + insert (wired)
+		update_or_insert=update + insert
+		find_or_insert=find + insert
+		delete_or_insert= delete + insert
 		
-	Level 3: Flexible Combinations <Maybe>
-			such as Find_or_Delete
+	Level 3: Flexible Combinations <Implemented>
+		deleter
+		deleter_or_insert
 		
 	Level 4: Flexible Combinations <Maybe>
-			to make basic operations are public. And programmer can make flexible logical     
+		to make basic operations are public. And programmer can make flexible logical     
